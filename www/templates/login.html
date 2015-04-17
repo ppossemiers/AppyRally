@@ -1,0 +1,28 @@
+<div>
+ <ion-view title='<img src="img/APpy.png" class="nav-image"/>' hide-back-button="true">
+ <ion-nav-bar class="bar-dark"> </ion-nav-bar>
+ <ion-content ng-controller="LoginCtrl">
+  <div class="list list-inset">
+   <!--br>
+   <label class="item item-input item-select">
+    <div class="input-label"><h4>Taal</h4></div><select ng-init="login.lan = options[0]" ng-model="login.lan" ng-options="o as o for o in options"></select>
+   </label-->
+   <br>
+   <ion-radio ng-model="login.team" ng-value="'ind'"><h4>Individueel</h4></ion-radio>
+   <ion-radio ng-model="login.team" ng-value="'group'"><h4>Groep</h4></ion-radio>
+   <br>
+   <label class="item item-input"> <span class="input-label"><h4>Naam</h4></span>
+    <input type="text" ng-model="login.name" placeholder="Naam">
+   </label> <label class="item item-input"> <span class="input-label"><h4>Email</h4></span>
+    <input type="email" ng-model="login.email" placeholder="Email">
+   </label>
+   
+   <label><ion-scroll style="width: 100%; height: 5em; padding: 16px;">
+   </ion-scroll></label>
+   <ion-checkbox ng-model="login.checked" class="checkbox-assertive"><h4>Ik accepteer de gebruikersvoorwaarden</h4></ion-checkbox>
+   <label>
+   <button class="button button-block button-assertive" ng-click="doLogin()">Log in</button></label>
+  </div>
+ </ion-content>
+ </ion-view>
+</div>

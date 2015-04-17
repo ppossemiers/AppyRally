@@ -1,0 +1,28 @@
+
+ <body class="item-content" ng-controller="QuestionCtrl">
+  <ion-view id="question" title="Question">
+   <ion-content id="questionbtns">
+    <ion-list>
+     <h2 ng-repeat="item in hotspot" align="center"> {{ item.hotspot }}</h2>
+     
+     <h2 ng-repeat="item in image" align="center"><img src="{{ item.image }}" alt="foto" style="width:100%"></h2> 
+     <br>
+     
+     <h4 ng-repeat="item in question" align="center">{{ item.question }}</h4>
+     <br/>
+     
+     <p id="multi">
+     <ion-radio ng-repeat="item in answer" ng-value="item.items" ng-model="validate.answer">{{ item.items }}</ion-radio>
+     </p>
+     
+     <p id="open">
+     <label class="item item-input"> <span class="input-label">Antwoord: </span>
+     <input type="text" ng-model="validate.answer" placeholder="Antwoord" required> 
+     </label>
+     </p>
+     
+     <button class="button button-large button-block button-assertive" ng-click="validate()">Bevestig uw antwoord</button>
+    </ion-list>
+   </ion-content>
+  </ion-view>
+ </body>

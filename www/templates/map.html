@@ -1,0 +1,13 @@
+<ion-view title='<img src="img/APpy.png" class="nav-image"/>'>
+	<ion-nav-bar class="bar-dark">
+		<a ng-model = "progress" class="pull-left score-beauty" >{{progress}}/10 </a>
+      <ion-nav-buttons side="right">
+      <a class="button button-large button-assertive score-beauty" ng-click="scanBarcode()">QR</a>
+      <a class="button button-large button-assertive score-beauty" ng-click="takePhoto()">PIC</a>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    	<ion-content>
+		<div id="map" data-tap-disabled="true">
+		</div>
+	</ion-content>
+</ion-view>
